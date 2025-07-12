@@ -8,13 +8,6 @@ SwiftUI Shimmer is a Swift Package Manager (SPM) library that provides a customi
 - Configurable rotation effects
 - Easy integration with SwiftUI Environment Keys
 
-## Installation
-To integrate `swiftui-shimmer` into your project, add it as a dependency in your `Package.swift` file:
-
-```swift
-.package(url: "https://github.com/your-repo/swiftui-shimmer.git", from: "1.0.0")
-```
-
 ## Usage
 Import the library and use the `Shimmer` view to apply shimmer effects to your SwiftUI shapes:
 
