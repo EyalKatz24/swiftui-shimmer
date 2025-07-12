@@ -16,6 +16,14 @@ public struct Shimmer<S: Shape>: View {
 
     public let shape: S
     
+    private var animationSpeed: TimeInterval {
+        let value = shimmerAnimation.speed.value
+        switch value {
+        case .zero: return 1.0
+        default: return abs(value)
+        }
+    }
+    
     public init(shape: S) {
         self.shape = shape
     }
@@ -38,7 +46,7 @@ public struct Shimmer<S: Shape>: View {
                     .offset(x: geometry.size.width * (animating ? 1.4 : -1.4))
                     .rotationEffect(.degrees(rotation.degrees))
                     .animation(
-                        .linear(duration: 1.5 * shimmerAnimation.speed.value)
+                        .linear(duration: 1.5 / animationSpeed)
                         .delay(shimmerAnimation.delay)
                         .repeatForever(autoreverses: false),
                         value: animating
@@ -67,5 +75,6 @@ public struct Shimmer<S: Shape>: View {
         
         Shimmer(shape: .rect(cornerRadius: 10))
             .frame(width: 150, height: 50)
+            .environment(\.shimmerAnimation, .init(speed: .fast))
     }
 }

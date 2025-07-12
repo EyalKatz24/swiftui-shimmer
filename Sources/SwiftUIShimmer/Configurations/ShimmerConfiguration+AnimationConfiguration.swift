@@ -47,8 +47,8 @@ public extension ShimmerConfiguration.AnimationConfiguration {
         public var value: Double {
             switch self {
             case .default: 1.0
-            case .fast: 0.5
-            case .slow: 1.6
+            case .fast: 2.0
+            case .slow: 0.625
             case let .custom(value): value
             }
         }
