@@ -12,6 +12,7 @@ public struct Shimmer<S: Shape>: View {
     @State private var animating = false
     @Environment(\.shimmerColors) private var shimmerColors: ShimmerConfiguration.Colors
     @Environment(\.shimmerRotation) private var rotation: ShimmerConfiguration.Rotation
+    @Environment(\.shimmerSpeed) private var speed: ShimmerConfiguration.Speed
 
     let shape: S
     
@@ -37,7 +38,7 @@ public struct Shimmer<S: Shape>: View {
                     .offset(x: geometry.size.width * (animating ? 1.4 : -1.4))
                     .rotationEffect(.degrees(rotation.degrees))
                     .animation(
-                        .linear(duration: 1.5)
+                        .linear(duration: 1.5 * speed.value)
                         .repeatForever(autoreverses: false),
                         value: animating
                     )

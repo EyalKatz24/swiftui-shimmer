@@ -8,11 +8,11 @@
 import SwiftUI
 
 private struct SpeedEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Double = 1.0
+    static let defaultValue: ShimmerConfiguration.Speed = .default
 }
 
 public extension EnvironmentValues {
-    var shimmerSpeed: Double {
+    var shimmerSpeed: ShimmerConfiguration.Speed {
         get { self[SpeedEnvironmentKey.self] }
         set { self[SpeedEnvironmentKey.self] = newValue }
     }

@@ -18,8 +18,8 @@ public extension ShimmerConfiguration {
         var value: Double {
             switch self {
             case .default: 1.0
-            case .fast: 2.0
-            case .slow: 0.5
+            case .fast: 0.5
+            case .slow: 1.6
             case let .custom(value): value
             }
         }
