@@ -7,8 +7,4 @@
 
 import SwiftUI
 
-public struct ShimmerConfiguration {
-    
-    var colors: Colors = Colors()
-    var rotation: Rotation = .default
-}
+public enum ShimmerConfiguration { }

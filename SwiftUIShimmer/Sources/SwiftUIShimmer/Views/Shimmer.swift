@@ -14,7 +14,7 @@ public struct Shimmer<S: Shape>: View {
     @Environment(\.shimmerRotation) private var rotation: ShimmerConfiguration.Rotation
     @Environment(\.shimmerAnimation) private var shimmerAnimation: ShimmerConfiguration.AnimationConfiguration
 
-    let shape: S
+    public let shape: S
     
     public init(shape: S) {
         self.shape = shape
