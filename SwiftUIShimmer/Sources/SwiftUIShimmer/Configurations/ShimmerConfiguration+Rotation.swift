@@ -8,6 +8,7 @@
 import SwiftUI
 
 public extension ShimmerConfiguration {
+    
     enum Rotation {
         case `default`
         case leanForward
