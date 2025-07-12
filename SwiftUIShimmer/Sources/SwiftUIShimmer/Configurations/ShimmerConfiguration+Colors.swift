@@ -10,8 +10,8 @@ import SwiftUI
 public extension ShimmerConfiguration {
     
     struct Colors {
-        let shapeColor: Color
-        let shimmerColor: Color
+        public let shapeColor: Color
+        public let shimmerColor: Color
         
         public init(shapeColor: Color = Constants.DefaultColors.shapeColor, shimmerColor: Color = Constants.DefaultColors.shimmerColor) {
             self.shapeColor = shapeColor

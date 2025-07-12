@@ -15,7 +15,7 @@ public extension ShimmerConfiguration {
         case leanBackward
         case custom(degrees: Double)
         
-        var degrees: Double {
+        public var degrees: Double {
             switch self {
             case .default: .zero
             case .leanForward: 20
