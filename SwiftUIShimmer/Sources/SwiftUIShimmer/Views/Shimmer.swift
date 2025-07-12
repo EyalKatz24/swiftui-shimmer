@@ -13,8 +13,7 @@ struct Shimmer<S: Shape>: View {
     var foregroundColor: Color = .primary.opacity(0.2)
     var shimmerColor: Color = .white.opacity(0.6)
     
-    // Future dev: move to configurations
-    var rotation: ShimmerConfiguration.Rotation = .custom(degrees: -20)
+    @Environment(\.shimmerRotation) private var rotation: ShimmerConfiguration.Rotation
     
     var body: some View {
         GeometryReader { geometry in
