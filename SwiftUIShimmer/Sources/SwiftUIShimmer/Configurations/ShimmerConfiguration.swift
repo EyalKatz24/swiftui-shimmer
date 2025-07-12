@@ -9,6 +9,6 @@ import SwiftUI
 
 public struct ShimmerConfiguration {
     
-    var shapeColor: Color = .primary.opacity(0.2)
-    var shimmerColor: Color = .white.opacity(0.5)
+    var colors: Colors = Colors()
+    var rotation: Rotation = .default
 }
