@@ -11,7 +11,10 @@ struct Shimmer<S: Shape>: View {
     @State private var animating = false
     var shape: S
     var foregroundColor: Color = .primary.opacity(0.2)
-    var shimmerColor: Color = .white.opacity(0.5)
+    var shimmerColor: Color = .white.opacity(0.6)
+    
+    // Future dev: move to configurations
+    var rotation: ShimmerConfiguration.Rotation = .custom(degrees: -20)
     
     var body: some View {
         GeometryReader { geometry in
@@ -27,8 +30,9 @@ struct Shimmer<S: Shape>: View {
                         startPoint: .leading,
                         endPoint: .trailing
                     )
-                    .frame(width: geometry.size.width * 0.7)
+                    .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 5)
                     .offset(x: geometry.size.width * (animating ? 1.4 : -1.4))
+                    .rotationEffect(.degrees(rotation.degrees))
                     .animation(
                         .linear(duration: 1.5)
                         .repeatForever(autoreverses: false),
