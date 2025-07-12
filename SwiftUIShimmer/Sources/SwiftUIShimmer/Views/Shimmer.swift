@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-struct Shimmer<S: Shape>: View {
+public struct Shimmer<S: Shape>: View {
+    
     @State private var animating = false
-    var shape: S
-    var foregroundColor: Color = .primary.opacity(0.2)
-    var shimmerColor: Color = .white.opacity(0.6)
-    
+    @Environment(\.shimmerColors) private var shimmerColors: ShimmerConfiguration.Colors
     @Environment(\.shimmerRotation) private var rotation: ShimmerConfiguration.Rotation
+
+    let shape: S
     
-    var body: some View {
+    public init(shape: S) {
+        self.shape = shape
+    }
+    
+    public var body: some View {
         GeometryReader { geometry in
             shape
-                .foregroundColor(foregroundColor)
+                .foregroundColor(shimmerColors.shapeColor)
                 .overlay(
                     LinearGradient(
                         colors: [
                             .clear,
-                            shimmerColor,
+                            shimmerColors.shimmerColor,
                             .clear
                         ],
                         startPoint: .leading,
