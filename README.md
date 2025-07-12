@@ -30,45 +30,15 @@ SwiftUI Shimmer provides environment keys that allow you to override shimmer con
 You can override the shimmer configurations using the following environment keys:
 
 ```swift
-.environment(\.shimmerColors, .init(shapeColor: <#T##Color#>, shimmerColor: <#T##Color#>))
-.environment(\.shimmerRotation, <#ShimmerConfiguration.Rotation#>)
-.environment(\.shimmerAnimation, .init(speed: <#T##ShimmerConfiguration.AnimationConfiguration.Speed#>, delay: <#T##TimeInterval#>))
+.environment(\.shimmerColors, .init(shapeColor: .yourShapeColor, shimmerColor: .yourShimmerColor))
+.environment(\.shimmerRotation, .leanForward) // Or any other rotation
+.environment(\.shimmerAnimation, .init(speed: .fast, delay: 0.75)) // Or and other speed and delay
 ```
 
 ### Description
 - **`shimmerColors`**: Allows you to customize the colors used in the shimmer effect. You can specify the shape color and shimmer color.
 - **`shimmerRotation`**: Configures the rotation effect applied to the shimmer animation.
 - **`shimmerAnimation`**: Enables customization of the animation speed and delay for the shimmer effect.
-
-### Example
-Override the shimmer configurations at the app level:
-
-```swift
-import SwiftUI
-import SwiftUIShimmer
-
-@main
-struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        .environment(\.shimmerColors, .init(shapeColor: .secondary.opacity(0.4), shimmerColor: .white.opacity(0.5)))
-        .environment(\.shimmerRotation, .leanForward)
-        .environment(\.shimmerAnimation, .init(speed: .fast, delay: 0.75))
-        }
-    }
-}
-```
-
-Override the shimmer configurations at the component level:
-
-```swift
-Shimmer(shape: Circle())
-    .frame(width: 100, height: 100)
-    .environment(\.shimmerColors, .init(shapeColor: .blue, shimmerColor: .green))
-    .environment(\.shimmerRotation, .vertical)
-    .environment(\.shimmerAnimation, .init(speed: .slow, delay: 1.0))
-```
 
 ## License
 This project is licensed under the MIT License.
