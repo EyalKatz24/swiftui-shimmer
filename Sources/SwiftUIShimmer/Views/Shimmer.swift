@@ -72,6 +72,7 @@ public struct Shimmer<S: Shape>: View {
         
         Shimmer(shape: .capsule)
             .frame(width: 150, height: 30)
+            .environment(\.shimmerRotation, .leanForward)
         
         Shimmer(shape: .rect(cornerRadius: 10))
             .frame(width: 150, height: 50)

@@ -10,7 +10,7 @@ import SwiftUI
 public enum Constants {
     
     public enum DefaultColors {
-        public static let shapeColor: Color = .gray.opacity(0.3)
-        public static let shimmerColor: Color = .white.opacity(0.6)
+        public static var shapeColor: Color = Color(ColorResource(name: "shapeBaseColor", bundle: .module))
+        public static let shimmerColor: Color = .init(ColorResource(name: "shimmerColor", bundle: .module))
     }
 }

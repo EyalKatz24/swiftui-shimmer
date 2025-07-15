@@ -9,14 +9,19 @@ let package = Package(
     products: [
         .library(
             name: "SwiftUIShimmer",
-            targets: ["SwiftUIShimmer"]),
+            targets: ["SwiftUIShimmer"])
     ],
     targets: [
         .target(
-            name: "SwiftUIShimmer"),
+            name: "SwiftUIShimmer",
+            resources: [
+                .process("Resources/Colors.xcassets")
+            ]
+        ),
+        
         .testTarget(
             name: "SwiftUIShimmerTests",
             dependencies: ["SwiftUIShimmer"]
-        ),
+        )
     ]
 )
