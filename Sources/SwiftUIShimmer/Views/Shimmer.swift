@@ -16,12 +16,17 @@ public struct Shimmer<S: Shape>: View {
 
     public let shape: S
     
-    private var animationSpeed: TimeInterval {
+    private var animationSpeed: Double {
         let value = shimmerAnimation.speed.value
         switch value {
         case .zero: return 1.0
         default: return abs(value)
         }
+    }
+    
+    private var animationDuration: TimeInterval {
+        guard !UIAccessibility.isReduceMotionEnabled else { return 10.0 }
+        return 1.5 / animationSpeed
     }
     
     public init(shape: S) {
@@ -46,7 +51,7 @@ public struct Shimmer<S: Shape>: View {
                     .offset(x: geometry.size.width * (animating ? 1.4 : -1.4))
                     .rotationEffect(.degrees(rotation.degrees))
                     .animation(
-                        .linear(duration: 1.5 / animationSpeed)
+                        .linear(duration: animationDuration)
                         .delay(shimmerAnimation.delay)
                         .repeatForever(autoreverses: false),
                         value: animating
