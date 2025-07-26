@@ -2,6 +2,7 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+import CompilerPluginSupport
 
 let package = Package(
     name: "VeryLazy",
@@ -11,11 +12,22 @@ let package = Package(
             name: "VeryLazy",
             targets: ["VeryLazy"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/swiftlang/swift-syntax.git", "509.0.0"..<"601.0.0-prerelease")
+    ],
     targets: [
         .target(
             name: "VeryLazy",
             resources: [
                 .process("Resources/Colors.xcassets")
+            ]
+        ),
+        
+        .testTarget(
+            name: "ShimmeringMacroTests",
+            dependencies: [
+                "ShimmeringMacro",
+                .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
             ]
         )
     ]
