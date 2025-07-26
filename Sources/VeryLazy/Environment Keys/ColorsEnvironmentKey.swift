@@ -22,13 +22,13 @@ import SwiftUI
 /// ```
 ///
 /// ## Default Values
-/// - `shapeColor`: System gray color
-/// - `shimmerColor`: White color
+/// - `shapeColor`: Light gray (#D1D2D4) in light mode, dark gray (#2E3239) in dark mode
+/// - `shimmerColor`: Very light gray (#EFEFF1) in light mode, medium gray (#545B63) in dark mode
 internal struct ColorsEnvironmentKey: EnvironmentKey {
     /// The default color configuration for shimmer effects.
     ///
     /// Uses the default `ShimmerConfiguration.Colors` initializer which provides
-    /// system-appropriate colors for the current appearance mode.
+/// appearance-appropriate colors that automatically adapt to light and dark modes.
     static let defaultValue: ShimmerConfiguration.Colors = ShimmerConfiguration.Colors()
 }
 

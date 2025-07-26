@@ -136,9 +136,9 @@ Personalize your shimmer effects with custom colors using the `shimmerColors` en
 
 **Color configuration options:**
 
-- `shapeColor`: Base color of the shape (defaults to system gray)
-- `shimmerColor`: Highlight color for the shimmer effect (defaults to white)
-- `.innerShape`: Predefined configuration for nested shapes with lighter colors
+- `shapeColor`: Base color of the shape (defaults to light gray in light mode, dark gray in dark mode)
+- `shimmerColor`: Highlight color for the shimmer effect (defaults to very light gray in light mode, medium gray in dark mode)
+- `.innerShape`: Predefined configuration for nested shapes with appearance-adaptive colors
 
 https://github.com/user-attachments/assets/4094653d-c6a7-4a9e-a740-fc404800776d
 

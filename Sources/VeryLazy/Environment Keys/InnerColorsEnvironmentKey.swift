@@ -26,13 +26,13 @@ import SwiftUI
 ///
 /// ## Default Values
 /// Uses `ShimmerConfiguration.Colors.innerShape` which provides:
-/// - `shapeColor`: Lighter base color for inner shapes
-/// - `shimmerColor`: Subtle highlight color for nested elements
+/// - `shapeColor`: Very light gray (#EFEFF1) in light mode, medium gray (#545B63) in dark mode
+/// - `shimmerColor`: Pure white (#FFFFFF) in light mode, light gray (#6C757E) in dark mode
 internal struct InnerColorsEnvironmentKey: EnvironmentKey {
     /// The default inner color configuration for nested shimmer effects.
     ///
     /// Uses `ShimmerConfiguration.Colors.innerShape` which provides a predefined
-    /// color scheme optimized for inner shapes in layered layouts.
+/// color scheme optimized for inner shapes in layered layouts with appearance-adaptive colors.
     static let defaultValue: ShimmerConfiguration.Colors = ShimmerConfiguration.Colors.innerShape
 }
 
