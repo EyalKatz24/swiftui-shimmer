@@ -1,4 +1,4 @@
-# swiftui-shimmer
+# SwiftUI Very Lazy 🤪
 
 [![Swift](https://img.shields.io/badge/Swift-5.9+-orange?logo=swift)](https://swift.org)
 [![SPM](https://img.shields.io/badge/SPM-Compatible-brightgreen?logo=hackthebox)](https://swift.org/package-manager)
