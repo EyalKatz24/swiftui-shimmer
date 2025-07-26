@@ -4,16 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUIShimmer",
+    name: "VeryLazy",
     platforms: [.macOS(.v10_15), .iOS(.v15), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
     products: [
         .library(
-            name: "SwiftUIShimmer",
-            targets: ["SwiftUIShimmer"])
+            name: "VeryLazy",
+            targets: ["VeryLazy"])
     ],
     targets: [
         .target(
-            name: "SwiftUIShimmer",
+            name: "VeryLazy",
             resources: [
                 .process("Resources/Colors.xcassets")
             ]
@@ -21,7 +21,7 @@ let package = Package(
         
         .testTarget(
             name: "SwiftUIShimmerTests",
-            dependencies: ["SwiftUIShimmer"]
+            dependencies: ["VeryLazy"]
         )
     ]
 )
