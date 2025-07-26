@@ -13,6 +13,7 @@ Very Lazy is a Swift Package Manager (SPM) library that provides a customizable 
 - Configurable rotation effects
 - Easy integration with SwiftUI Environment Keys
 
+    
 ## Quick Start 🚀
 
 Import the library and start creating beautiful shimmer effects:
@@ -26,7 +27,9 @@ Shimmer(shape: .circle)
 ...
 ```
 
+
 ## Examples & API Reference
+
 
 ### Basic Shimmer Shapes
 Create shimmer effects on various shapes with simple, clean animations.
@@ -42,6 +45,7 @@ HStack(spacing: 24) {
         .frame(width: 250, height: 40)
 }
 ```
+
 
 ### Layered Shimmer Components
 Use `LayeredShimmer` to create complex shimmer layouts with background shapes and nested content. This component provides a structured approach to building sophisticated loading states.
@@ -67,14 +71,15 @@ LayeredShimmer(background: .rect(cornerRadius: 10)) {
 }
 ```
 
+
 ### Rotation Effects
 Control the direction and style of the shimmer animation using the `shimmerRotation` environment key.
 
 **Available rotation options:**
-• `.default`: No rotation applied (0°)
-• `.leanForward`: Forward rotation by 20 degrees
-• `.leanBackward`: Backward rotation by -20 degrees
-• `.custom(degrees: Double)`: Custom rotation angle in degrees
+- `.default`: No rotation applied (0°)
+- `.leanForward`: Forward rotation by 20 degrees
+- `.leanBackward`: Backward rotation by -20 degrees
+- `.custom(degrees: Double)`: Custom rotation angle in degrees
 
 https://github.com/user-attachments/assets/c4ed16bf-45f5-439b-aa94-9586ade2b5f6
 
@@ -84,14 +89,15 @@ Shimmer(shape: .capsule)
     .environment(\.shimmerRotation, .leanForward)
 ```
 
+
 ### Animation Speed Control
 Fine-tune animation timing and behavior using the `shimmerAnimation` environment key.
 
 **Available speed options:**
-• `.default`: Standard animation speed (1.0x multiplier)
-• `.fast`: Fast animation speed (2.0x multiplier)
-• `.slow`: Slow animation speed (0.625x multiplier)
-• `.custom(value: Double)`: Custom speed multiplier
+- `.default`: Standard animation speed (1.0x multiplier)
+- `.fast`: Fast animation speed (2.0x multiplier)
+- `.slow`: Slow animation speed (0.625x multiplier)
+- `.custom(value: Double)`: Custom speed multiplier
 
 The delay parameter controls the initial pause before animation begins.
 
@@ -112,13 +118,14 @@ VStack(alignment: .leading, spacing: 8) {
 .environment(\.shimmerAnimation, .init(speed: .fast, delay: 0.75))
 ```
 
+
 ### Custom Colors
 Personalize your shimmer effects with custom colors using the `shimmerColors` environment key.
 
 **Color configuration options:**
-• `shapeColor`: Base color of the shape (defaults to system gray)
-• `shimmerColor`: Highlight color for the shimmer effect (defaults to white)
-• `.innerShape`: Predefined configuration for nested shapes with lighter colors
+- `shapeColor`: Base color of the shape (defaults to system gray)
+- `shimmerColor`: Highlight color for the shimmer effect (defaults to white)
+- `.innerShape`: Predefined configuration for nested shapes with lighter colors
 
 https://github.com/user-attachments/assets/4094653d-c6a7-4a9e-a740-fc404800776d
 
