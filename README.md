@@ -27,7 +27,7 @@ Very Lazy is designed to evolve with SwiftUI and iOS advancements, including:
 Import the library and start creating beautiful shimmer effects:
 
 ```swift
-import SwiftUIShimmer
+import VeryLazy
 
 ...
 Shimmer(shape: .circle)
