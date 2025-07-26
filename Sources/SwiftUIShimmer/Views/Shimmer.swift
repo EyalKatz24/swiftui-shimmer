@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct Shimmer<S: Shape>: View {
+public struct Shimmer<S>: View where S: Shape {
     
     @State private var animating = false
     @Environment(\.shimmerColors) private var shimmerColors: ShimmerConfiguration.Colors
@@ -76,7 +76,7 @@ public struct Shimmer<S: Shape>: View {
             .frame(width: 150, height: 75)
         
         Shimmer(shape: .capsule)
-            .frame(width: 150, height: 30)
+            .frame(width: 150, height: 60)
             .environment(\.shimmerRotation, .leanForward)
         
         Shimmer(shape: .rect(cornerRadius: 10))
