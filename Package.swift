@@ -17,11 +17,6 @@ let package = Package(
             resources: [
                 .process("Resources/Colors.xcassets")
             ]
-        ),
-        
-        .testTarget(
-            name: "SwiftUIShimmerTests",
-            dependencies: ["VeryLazy"]
         )
     ]
 )

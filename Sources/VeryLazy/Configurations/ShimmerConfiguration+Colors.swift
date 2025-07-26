@@ -18,7 +18,6 @@ public extension ShimmerConfiguration {
         /// The color of the shimmer (highlight color).
         public let shimmerColor: Color
         
-        
         /// Initializes a new `Colors` configuration for the shimmer effect.
         ///
         /// - Parameters:
