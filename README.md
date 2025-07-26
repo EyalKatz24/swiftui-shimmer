@@ -23,6 +23,28 @@ Shimmer(shape: Circle())
     .frame(width: 100, height: 100)
 ```
 
+
+
+https://github.com/user-attachments/assets/1acdc0a6-48b1-40bf-901e-131c22e1b4df
+
+
+
+https://github.com/user-attachments/assets/c4ed16bf-45f5-439b-aa94-9586ade2b5f6
+
+
+
+https://github.com/user-attachments/assets/6042783b-3846-4498-846e-588f06077118
+
+
+
+https://github.com/user-attachments/assets/8853bc6b-d1dc-4a05-8087-f17f73f6828b
+
+
+
+https://github.com/user-attachments/assets/4094653d-c6a7-4a9e-a740-fc404800776d
+
+
+
 ## Environment Dependencies
 SwiftUI Shimmer provides environment keys that allow you to override shimmer configurations at the app level or component level. These keys enable fine-grained control over shimmer effects.
 
